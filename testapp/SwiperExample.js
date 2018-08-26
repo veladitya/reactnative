@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
     fontSize: 30,
-    fontFamily: 'Inconsolata-Bold',
+    fontFamily: 'inconsolata-bold',
     fontWeight: 'bold',
   }
 })
@@ -50,10 +50,15 @@ export default class App extends Component {
           'inconsolata-regular': require('./assets/Inconsolata-Regular.ttf'),
           'inconsolata-bold': require('./assets/Inconsolata-Bold.ttf'),
           'libre-barcode-39': require('./assets/LibreBarcode39-Regular.ttf'),
+          'Arial': require('./assets/LibreBarcode39-Regular.ttf'),
         });
 
         this.setState({ fontsLoaded: true });
       };
+
+      onMomentumScrollEnd = (e, state, context) => {
+        console.log("==>> Index : ", state.index);
+    }
 
   render(){ 
     return ( !this.state.fontsLoaded
@@ -61,7 +66,7 @@ export default class App extends Component {
             <ActivityIndicator color="white" />
           </View>
         :
-      <Swiper style={styles.wrapper} showsButtons={true}>
+      <Swiper style={styles.wrapper} showsButtons={true} onMomentumScrollEnd={this.onMomentumScrollEnd}>
         <View style={styles.slide1}>
           <Text style={styles.text}>Hello Swiper</Text>
         </View>

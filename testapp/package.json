@@ -27,5 +27,10 @@
     "react-native-sideswipe": "^1.4.2",
     "react-native-swiper": "^1.5.13",
     "react-native-ticker": "^2.1.1"
+  },
+  "rnpm": {
+    "assets": [
+	"./assets/"
+    ]
   }
 }
