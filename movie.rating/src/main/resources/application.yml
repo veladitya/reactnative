@@ -1,0 +1,69 @@
+spring:
+  datasource:
+    #url: jdbc:h2:tcp://localhost:9092/C:/opt/fedex/sabre/h2db/moviesdb
+    url: jdbc:h2:/C:/opt/fedex/sabre/h2db/moviesdb
+    username: sa
+    driverClassName: org.h2.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create 
+server:
+  port: 6001
+moviesapi:
+  roles:
+  - name: DIRECTOR
+  - name: SCREENWRITER
+  - name: PRODUCER
+  - name: COMMON PEOPLE  
+  persons:
+  - id: Chiranjeevi
+    name: Chiranjeevi
+  - id: Nagarjuna
+    name: Nagarjuna
+  - id: Charan
+    name: Charan
+  - id: User 1
+    name: User 1
+  - id: User 2
+    name: User 2
+  - id: User 3
+    name: User 3
+  movies:
+  - movieId:  
+    title: Geetha Govindham
+    imageUrl: /gallery/xyz.jpg
+    tagline: family movie
+    hitRate: 0
+    flopRate: 0
+  - movieId:  
+    title: '@Narthanasala'
+    imageUrl: /gallery/n.jpg
+    tagline: family movie
+    hitRate: 0
+    flopRate: 0
+  - movieId:  
+    title: Neevevaro
+    imageUrl: /gallery/neevevaro.jpg
+    tagline: family movie
+    hitRate: 0
+    flopRate: 0
+movieRatings: 
+- movieTitle: A
+  userName: Chiranjeevi
+  rating: HIT
+- movieTitle: B
+  userName: Chiranjeevi
+  rating: FLOP 
+- movieTitle: A
+  userName: Nagarjuna
+  rating: HIT 
+- movieTitle: B
+  userName: Nagarjuna
+  rating: HIT
+- movieTitle: A
+  userName: Charan
+  rating: FLOP 
+- movieTitle: B
+  userName: Charan
+  rating: FLOP                           
